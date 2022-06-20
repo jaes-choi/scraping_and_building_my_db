@@ -1,6 +1,18 @@
 # scraping_and_building_my_db
 
 ```python
+url = 'https://jaes-choi.github.io/Scraping/sample/index.html'
+df_k_pop = pd.read_html(requests.get(url).text)[0]
+soup = BeautifulSoup(requests.get(url).text, 'html.parser')
+
+df_k_link = pd.DataFrame([anchor['href'] 
+                          for anchor in soup.find('table').find_all('a')], 
+                         columns=['link'])
+
+pd.concat([df_k_pop,df_k_link], axis=1)
+```
+
+```python
 url_kids_songs = 'https://jaes-choi.github.io/Scraping/sample/sample_kids_song.html'
 pd.read_html(url_kids_songs) 
 ```
