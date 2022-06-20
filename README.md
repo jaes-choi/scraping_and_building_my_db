@@ -1,5 +1,23 @@
 # scraping_and_building_my_db
 
+### 뉴스
+``` python
+import requests
+import re
+from bs4 import BeautifulSoup
+import pandas as pd
+
+url = 'https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+for anchor in soup.find_all('a'):
+    print(anchor.text, anchor['href'])
+
+for anchor in soup.find_all('a', href=re.compile('n.news.naver.com')):
+    print(anchor.text, anchor['href'])
+```
+
 ### 외인/기관 투자 정보 merge 및 분석
 ``` python
 foreign.columns = ['날짜', '종가', '전일비', '등락률', '거래량', '기관', '외국인', '보유주수', '보유율']
