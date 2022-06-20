@@ -1,5 +1,10 @@
 # scraping_and_building_my_db
 
+### 컬럼명
+``` python
+foreign.columns = ['날짜', '종가', '전일비', '등락률', '거래량', '기관', '외국인', '보유주수', '보유율']
+```
+
 ```python
 bear_song = pd.DataFrame(link_list).iloc[1,2].replace('가','').replace('은','')
 
