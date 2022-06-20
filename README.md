@@ -7,7 +7,7 @@ for word in bear_song.split():
     if '곰' in word:
         print(word)
 
-bear_song = pd.DataFrame(link_list).iloc[1,2].replace('가','')
+bear_song = pd.DataFrame(link_list).iloc[1,2]
 
 import re
 re.findall('(\w*[곰]\*?)[가|은]?\W', bear_song)
