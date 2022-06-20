@@ -1,6 +1,19 @@
 # scraping_and_building_my_db
 
 ```python
+bear_song = pd.DataFrame(link_list).iloc[1,2].replace('가','').replace('은','')
+
+for word in bear_song.split():
+    if '곰' in word:
+        print(word)
+
+bear_song = pd.DataFrame(link_list).iloc[1,2].replace('가','')
+
+import re
+re.findall('(\w*[곰]\*?)[가|은]?\W', bear_song)
+```
+
+```python
 url = 'https://jaes-choi.github.io/Scraping/sample/index.html'
 df_k_pop = pd.read_html(requests.get(url).text)[0]
 soup = BeautifulSoup(requests.get(url).text, 'html.parser')
