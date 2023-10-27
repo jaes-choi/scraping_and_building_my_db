@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="jaes">
+  <title>유명한 노래들</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      margin: 0; /* 상단 여백 제거 */
+    }
+    h2 {
+      color: #333;
+      margin-left: 20px;
+      font-size: 24px; /* 폰트 크기 조절 */
+      font-weight: bold; /* 폰트 굵기 조절 */
+      text-transform: uppercase; /* 대문자로 변환 */
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* 그림자 효과 추가 */
+    }
+    .kor {
+      background-color: #ff9999; /* 연한 분홍색 배경 */
+      color: #fff; /* 흰색 텍스트 */
+      font-weight: bold; /* 폰트 굵기 조절 */
+      padding: 5px 10px; /* 내부 여백 설정 */
+      border-radius: 5px; /* 둥근 모서리 */
+      text-transform: uppercase; /* 대문자로 변환 */
+    }
+    .eng {
+      background-color: #ffff66; /* 연한 노란색 배경 */
+      color: #333; /* 어두운 텍스트 */
+      font-weight: bold; /* 폰트 굵기 조절 */
+      padding: 5px 10px; /* 내부 여백 설정 */
+      border-radius: 5px; /* 둥근 모서리 */
+      text-transform: uppercase; /* 대문자로 변환 */
+    }
+    .lyrics {
+      margin-top: 15px; /* 노래 제목과 가사 사이의 간격 조절 */
+      line-height: 1.4; /* 가사의 줄 간격 조절 */
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .top {
+      padding: 20px;
+      background-color: #fff;
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px; /* top과 bottom 사이에 20px의 공간 추가 */
+    }
+    .left-column, .right-column {
+      width: 45%; /* 각 컬럼 너비 조절 가능 */
+      padding: 20px;
+      background-color: #fff;
+    }
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+	th, td {
+	  border: 1px solid #ccc;
+	  padding: 4px 8px; /* 셀 내부의 상단 및 하단 패딩을 조절하여 높이 조절 */
+	  text-align: center;
+	}
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    .kids {
+      margin-left: 20px;
+      margin-top: 25px; /* 노래와 노래 사이의 간격 조절 */
+    }
+    li a {
+      text-decoration: none;
+    }
+    p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>유명한 노래들 모음</h1>
+  <div class="wrapper">
+    <div class="top">
+      <h2>80년대 가요</h2>
+      <table>
+        <tr>
+          <th>제목</th><th>가수</th><th>연도</th>
+        </tr>
+		<tr>
+		  <td><a href="http://example.com/k-pop/hangjin" class="k-pop" id="kpop1">행진</a></td>
+		  <td>들국화</td><td>1985</td>
+		</tr>
+		<tr>
+		  <td><a href="http://example.com/k-pop/sarang" class="k-pop" id="kpop2">사랑하기 때문에</a></td>
+		  <td>유재하</td><td>1987</td>
+		</tr>
+		<tr>
+		  <td><a href="http://example.com/k-pop/danbal" class="k-pop" id="kpop3">단발머리</a></td>
+		  <td>조용필</td><td>1980</td>
+		</tr>
+		<tr>
+		  <td><a href="http://example.com/k-pop/radio" class="k-pop" id="kpop4">크게 라디오를 켜고</a></td>
+		  <td>시나위</td><td>1986</td>
+		</tr>
+		<tr>
+		  <td><a href="http://example.com/k-pop/noeul" class="k-pop" id="kpop5">붉은 노을</a></td>
+		  <td>이문세</td><td>1988</td>
+		</tr>
+      </table>
+    </div>
+    <div class="bottom">
+      <div class="left-column">
+        <h2>국내 동요</h2>
+        <ul>
+          <div class="kids">
+            <li><a class="kor" href="https://jaes-choi.github.io/Scraping/sample/kids/kr/candy.html" name="candy" id="k_kids1">솜사탕</a></li>
+            <p class="lyrics">나뭇가지에 실처럼 날아든 솜사탕 <br> 
+              하얀눈처럼 희고도 깨끗한 솜사탕 <br>
+              엄마손잡고 나들이갈때 먹어본 솜사탕 <br> 
+              훅훅 불면은 구멍이 뚫리는 커다란 솜사탕</p>
+          </div>
+			<div class="kids">
+			  <li><a class="kor" href="https://jaes-choi.github.io/Scraping/sample/kids/kr/bear.html" name="bear" id="k_kids2">곰세마리</a></li>
+			  <p class="lyrics">곰세마리가 한 집에 있어 <br> 
+				아빠곰 엄마곰 애기곰 <br>
+				아빠곰은 뚱뚱해 <br> 
+				엄마곰은 날씬해 <br>
+				애기곰은 너무 귀여워 <br> 
+				히쭉히쭉 잘한다</p>
+			</div>
+			<div class="kids">
+			  <li><a class="kor" href="https://jaes-choi.github.io/Scraping/sample/kids/kr/tv.html" name="tv" id="k_kids3">텔레비전에 내가 나왔으면</a></li>
+			  <p class="lyrics">텔레비전에 내가 나왔으면 <br>
+				정말 좋겠네 정말 좋겠네 <br>
+				춤추고 노래하는 예쁜 내 얼굴 <br>
+				텔레비전에 내가 나왔으면 <br>
+				정말 좋겠네 정말 좋겠네</p>
+			</div>
+        </ul>
+      </div>
+      <div class="right-column">
+        <h2>외국 동요</h2>
+        <ul>
+          <div class="kids">
+            <li><a class="eng" href="https://jaes-choi.github.io/Scraping/sample/kids/en/star.html" name="star" id="e_kids1">Twinkle, Twinkle, Little Star</a></li>
+            <p class="lyrics">Twinkle, twinkle, little star,<br>
+              How I wonder what you are!<br>
+              Up above the world so high,<br>
+              Like a diamond in the sky</p>
+          </div>
+			<div class="kids">
+			  <li><a class="eng" href="https://jaes-choi.github.io/Scraping/sample/kids/en/rain.html" name="rain" id="e_kids2">Rain, Rain, Go Away</a></li>
+			  <p class="lyrics">Rain, rain, go away<br>
+				Come again another day<br>
+				Daddy wants to play<br>
+				Rain, rain go away</p>
+			</div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
